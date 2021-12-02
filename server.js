@@ -23,7 +23,7 @@ const MongoStore = require ('connect-mongo')
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true }
 
 app.use(session({
-    store: MongoStore.create({ mongoUrl:'mongodb+srv://ariel:Coder2021@cluster0.wjzen.mongodb.net/ecommerce?retryWrites=true&w=majority',
+    store: MongoStore.create({ mongoUrl:MONGOURL,
     mongoOptions: advancedOptions, ttl: 600
     }),
     secret: 'secreto',
